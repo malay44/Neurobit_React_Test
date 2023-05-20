@@ -4,6 +4,7 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import {useSelector} from 'react-redux';
 
 const steps = ["Upload EDFs", "Map Channels", "Save & Preview"];
 
@@ -93,7 +94,7 @@ const theme = createTheme({
 });
 
 export default function FormProgress() {
-  // const montageCount = useSelector((state) => state.montage.currentStep);
+  const montageCount = useSelector((state) => state.montage.currentStep);
   return (
     <ThemeProvider theme={theme}>
       <Box
@@ -105,12 +106,11 @@ export default function FormProgress() {
         }}
       >
         <Stepper
-          activeStep={0}
           sx={{
             ".MuiSvgIcon-root": {},
             ".MuiSvgIcon-root.Mui-active": {},
           }}
-          // activeStep={montageCount}
+          activeStep={montageCount}
           alternativeLabel
         >
           {steps.map((label) => (

@@ -7,12 +7,12 @@ import Stack from '@mui/material/Stack';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-// import { useDispatch } from 'react-redux';
-// import { edfUploadReq } from '../../features/montages/MontagesSlice';
+import { useDispatch } from 'react-redux';
+import { edfUploadReq } from '../features/MontagesSlice';
 
 function DragAndDrop() {
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [selectedFiles, setSelectedFiles] = useState([]);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ function DragAndDrop() {
     localStorage.setItem('selectedFile', JSON.stringify(filesArray[0]));
 
     // Dispatch action with file reference
-    // dispatch(edfUploadReq({ fileRef: 'selectedFile' }));
+    dispatch(edfUploadReq({ fileRef: 'selectedFile' }));
   };
 
   const handleBrowse = (e) => {
@@ -56,7 +56,7 @@ function DragAndDrop() {
     };
 
     // Dispatch action with file reference
-    // dispatch(edfUploadReq({ fileRef: 'selectedFile' }));
+    dispatch(edfUploadReq({ fileRef: 'selectedFile' }));
   };
 
   return (
