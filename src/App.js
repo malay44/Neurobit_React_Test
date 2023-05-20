@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import SideBar from './Components/SideBar';
+import BottomNav from './Components/BottomNav';
+import TopNav from './Components/TopNav';
+import FormProgress from './Components/FormProgress';
+import DragAndDrop from './Components/DragAndDrop';
+import { Box } from '@mui/material';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{backgroundColor:"#F5F6FA"}}>
+      <SideBar/>
+      <main style={{marginLeft: 250}}>
+        <Box sx={{mx: 6, my: 5}}>
+          <TopNav />
+          <FormProgress />
+          <DragAndDrop />
+        </Box>
+        <BottomNav/>
+      </main>
     </div>
   );
 }
