@@ -11,130 +11,120 @@ import NoteAddOutlinedIcon from "@mui/icons-material/NoteAddOutlined";
 import * as RxIcon from "react-icons/rx";
 import * as GIIcon from "react-icons/gi";
 
-const drawerWidth = 250;
+const drawerWidth = 220;
 
 function SideBar(props) {
   return (
-      <Drawer
-        variant="permanent"
-        sx={{
-          display: { display: "flex", flexDirection: "column" },
-          ".MuiDrawer-paper": {
-            boxSizing: "border-box",
-            width: drawerWidth,
-            height: "1080px",
-            backgroundColor: "#04263A",
-          },
-        }}
-        open
-      >
-        <Box sx={{ color: "white" }}>
-          <Typography
-            variant="h5"
-            align="center"
-            fontWeight="700"
-            fontSize="28px"
-            sx={{ my: 4 }}
-          >
-            React Test
-          </Typography>
-          <Divider
-            sx={{
-              width: "80%",
-              margin: "auto",
-              height: "2px",
-              backgroundColor: "#4F4F4F",
-            }}
-          />
-          <ListItem disablePadding sx={{ my: 1 }}>
-            <ListItemButton>
-              <ListItemIcon>
-                <RxIcon.RxDashboard width="20px" style={{ color: "white" }} />
-              </ListItemIcon>
-              <ListItemText>
-                <Typography
-                  variant="p"
-                  align="center"
-                  fontWeight="400"
-                  fontSize="18px"
-                >
-                  Dashboard
-                </Typography>
-              </ListItemText>
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding sx={{ my: 1 }}>
-            <ListItemButton sx={{ backgroundColor: "#0F4662" }}>
-              <ListItemIcon>
-                <NoteAddOutlinedIcon style={{ color: "white" }} />
-              </ListItemIcon>
-              <ListItemText>
-                <Typography
-                  variant="p"
-                  align="center"
-                  fontWeight="400"
-                  fontSize="18px"
-                >
-                  Montages
-                </Typography>
-              </ListItemText>
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding sx={{ my: 1 }}>
-            <ListItemButton>
-              <ListItemIcon>
-                <GIIcon.GiTwoCoins style={{ color: "white" }} />
-              </ListItemIcon>
-              <ListItemText>
-                <Typography
-                  variant="p"
-                  align="center"
-                  fontWeight="400"
-                  fontSize="18px"
-                >
-                  Credits
-                </Typography>
-              </ListItemText>
-            </ListItemButton>
-          </ListItem>
-
-        </Box>
-        <Box
-        sx={{
-            backgroundColor: "#02354F",
+    <Drawer
+      variant="permanent"
+      sx={{
+        "MuiPaper-root": {
+        },
+        ".MuiDrawer-paper":{
+          // apply this style to the drawer background: linear-gradient(180deg, #04273A 0%, rgba(3, 23, 35, 0.96) 100%);
+          background: "linear-gradient(180deg, #04273A 0%, rgba(3, 23, 35, 0.96) 100%)",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          boxSizing: "border-box",
+          width: drawerWidth,
+          height: "100%",
+        },
+      }}
+      open
+    >
+      <Box sx={{ color: "white" }}>
+        <Typography
+          variant="h5"
+          align="center"
+          fontWeight="700"
+          fontSize="28px"
+          sx={{ my: 4 }}
+        >
+          React Test
+        </Typography>
+        <Divider
+          sx={{
             width: "80%",
-            height: "145px",
             margin: "auto",
-            // right: "40px",
-            textAlign: "center",
-            alignItems: "center",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            // bottom: "100px",
-            // position: "absolute",
+            height: "2px",
+            backgroundColor: "#4F4F4F",
+          }}
+        />
+        <ListItem disablePadding sx={{ my: 1 }}>
+          <ListItemButton>
+            <ListItemIcon sx={{ minWidth: 32 }}>
+              <RxIcon.RxDashboard width="20px" style={{ color: "white" }} />
+            </ListItemIcon>
+            <ListItemText>
+              <Typography variant="p" align="center" fontWeight="400">
+                Dashboard
+              </Typography>
+            </ListItemText>
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding sx={{ my: 1 }}>
+          <ListItemButton sx={{ backgroundColor: "#0F4662" }}>
+            <ListItemIcon sx={{ minWidth: 32 }}>
+              <NoteAddOutlinedIcon style={{ color: "white" }} />
+            </ListItemIcon>
+            <ListItemText>
+              <Typography variant="p" align="center" fontWeight="400">
+                Montages
+              </Typography>
+            </ListItemText>
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding sx={{ my: 1 }}>
+          <ListItemButton>
+            <ListItemIcon sx={{ minWidth: 32 }}>
+              <GIIcon.GiTwoCoins style={{ color: "white" }} />
+            </ListItemIcon>
+            <ListItemText>
+              <Typography variant="p" align="center" fontWeight="400">
+                calls
+              </Typography>
+            </ListItemText>
+          </ListItemButton>
+        </ListItem>
+      </Box>
+      <Box
+        sx={{
+          backgroundColor: "#02354F",
+          width: "80%",
+          height: 110,
+          mx: "auto",
+          mb: 4,
+          // right: "40px",
+          textAlign: "center",
+          alignItems: "center",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          // bottom: "100px",
+          // position: "absolute",
         }}
-        >
+      >
         <Typography
-            sx={{
+          sx={{
             color: "white",
-            fontSize: "28px",
+            fontSize: "21px",
             fontWeight: "500",
-            }}
+          }}
         >
-            1,650
+          1,650
         </Typography>
         <Typography
-            sx={{
+          sx={{
             color: "white",
-            fontSize: "16px",
+            fontSize: "11px",
             fontWeight: "500",
-            }}
+          }}
         >
-            Total Credits Available
+          Total Credits Available
         </Typography>
-        </Box>
-      </Drawer>
+      </Box>
+    </Drawer>
   );
 }
 
