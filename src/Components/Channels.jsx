@@ -47,7 +47,7 @@ export default function Channels({item, selectedOption, handleChangePrimary, han
             value={value?.backupPrimary[index] || "null"}             
             onChange={(e)=>{handleChangeBackupPrimary(item,index,e)}}
           >
-            <MenuItem sx={{fontSize: "0.8rem", color: "#6D6D6D", fontWeight: "500"}} value="null">Select Channel</MenuItem>
+            <MenuItem sx={{fontSize: "0.8rem", color: "#6D6D6D", fontWeight: "500"}} value={null}>Select Channel</MenuItem>
             {names.map((name) => {
               return <MenuItem sx={{fontSize: "0.8rem", color: "#6D6D6D", fontWeight: "500"}} value={name}>{name}</MenuItem>;
             })}
@@ -69,7 +69,7 @@ export default function Channels({item, selectedOption, handleChangePrimary, han
             value={value?.backupRefrence[index] || "null"}
             onChange={(e)=>{handleChangeBackupRefrence(item,index,e)}}
           >
-            <MenuItem sx={{fontSize: "0.8rem", color: "#6D6D6D", fontWeight: "500"}} value="null">Select Channel</MenuItem>
+            <MenuItem sx={{fontSize: "0.8rem", color: "#6D6D6D", fontWeight: "500"}} value={null}>Select Channel</MenuItem>
             {names.map((name) => {
               return <MenuItem sx={{fontSize: "0.8rem", color: "#6D6D6D", fontWeight: "500"}} value={name}>{name}</MenuItem>;
             })}
@@ -145,7 +145,7 @@ export default function Channels({item, selectedOption, handleChangePrimary, han
             value={value?.primary || "null"}
             onChange={(e)=>{handleChangePrimary(e,item)}}
           >
-            <MenuItem sx={{fontSize: "0.8rem", color: "#6D6D6D", fontWeight: "500"}} value="null">Select Channel</MenuItem>
+            <MenuItem sx={{fontSize: "0.8rem", color: "#6D6D6D", fontWeight: "500"}} value={null}>Select Channel</MenuItem>
             {names.map((name) => {
               return <MenuItem sx={{fontSize: "0.8rem", color: "#6D6D6D", fontWeight: "500"}} value={name}>{name}</MenuItem>;
             })}
@@ -167,7 +167,7 @@ export default function Channels({item, selectedOption, handleChangePrimary, han
             value={value?.refrence || "null"}
             onChange={(e)=>{handleChangeRefrence(e,item)}}
           >
-            <MenuItem sx={{fontSize: "0.8rem", color: "#6D6D6D", fontWeight: "500"}} value="null">Select Channel</MenuItem>
+            <MenuItem sx={{fontSize: "0.8rem", color: "#6D6D6D", fontWeight: "500"}} value={null}>Select Channel</MenuItem>
             {names.map((name) => {
               return <MenuItem sx={{fontSize: "0.8rem", color: "#6D6D6D", fontWeight: "500"}} value={name}>{name}</MenuItem>;
             })}
