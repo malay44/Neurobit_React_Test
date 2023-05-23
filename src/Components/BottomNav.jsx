@@ -17,7 +17,7 @@ export default function BottomNav() {
   console.log(montage.edf === null);
 
   return (
-    <Box sx={{ display: "flex", height: "80px", width: "100%", marginTop: "2rem", backgroundColor: "white"}} >
+    <Box sx={{ display: currentStep>2 ? "none" :"flex", height: "80px", width: "100%", marginTop: "2rem", backgroundColor: "white"}} >
       <Box sx={{ display: "flex", mb: "1rem",flexDirection: "row", justifyContent: "space-between", alignItems: "center", width: "100%"}}>
         <Box sx={{ ml: 5 }}>
           <Button onClick={() => {dispatch(decrementCount())}} variant="outlined" component="span" sx={{ backgroundColor: "white", color: "#959595", px: "55px", py: "15px", mt: "20px", border: "1px solid #959595" }}>

@@ -5,11 +5,13 @@ import { decrementCount } from "../features/MontagesSlice.js";
 export default function PreviewChannel({ item }) {
   const dispatch = useDispatch();
   const montage = useSelector((state) => state.montage.selectedOption);
+  const currentStep = useSelector((state) => state.montage.currentStep);
   const value = montage[item.split("-")[1] - 1]?.[item];
 
   const CustomButton = (props) => {
     return (
       <Button
+        disabled={currentStep > 2 ? true : false}
         variant="outlined"
         {...props}
         sx={{
@@ -23,7 +25,7 @@ export default function PreviewChannel({ item }) {
     );
   };
   return (
-    <div>
+    <Box sx={{boxShadow:"0px 3px 20px 4px rgba(0, 0, 0, 0.04)", borderRadius: 2}}>
       <Box
         sx={{
           borderRadius: "5px",
@@ -33,6 +35,7 @@ export default function PreviewChannel({ item }) {
           gridTemplateColumns: "69.297079% 30.702921%",
           gap: "2px",
           mt: 2,
+          overflow: "hidden",
         }}
       >
         <div>
@@ -134,6 +137,6 @@ export default function PreviewChannel({ item }) {
           />
         </div>
       </Box>
-    </div>
+      </Box>
   );
 }
