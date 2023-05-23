@@ -109,7 +109,7 @@ export default function PreviewChannel({ item }) {
               }}
             >
               {value?.backupPrimary?.map((item, index) => {
-                if ((item !== null) & (value?.backupRefrence[index] !== null))
+                if (!((item == null) & (value?.backupRefrence[index] == null)))
                   return (
                     <>
                       <div
