@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setOptions, setSpindle, setArtifacts } from "../features/MontagesSlice";
 import { Box, Checkbox, FormControlLabel, FormGroup, Typography } from "@mui/material";
-import sampleData from "../data/sample.json";
+
 import Channels from "./Channels";
 
 const MapChannels = () => {
@@ -13,7 +13,8 @@ const MapChannels = () => {
   const [selectedOption, setSelectedOption] = useState(montage);
   const [spindleChecked, setSpindleChecked] = useState(spindle);
   const [artifactChecked, setArtifactChecked] = useState(artifacts);
-  
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const channelNames = numbers.map((number) => `channel-${number}`);
   useEffect(() => {
     dispatch(setOptions(selectedOption));
     // console.log("selectedOption", selectedOption);
@@ -226,7 +227,7 @@ const MapChannels = () => {
           Reference Channel (default N/A)
         </Typography>
       </Box>
-      {sampleData.channels.map((item, index) => {
+      {channelNames.map((item, index) => {
         return (
           <Channels
             key={item.toString()}
