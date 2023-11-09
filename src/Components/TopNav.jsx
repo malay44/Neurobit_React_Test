@@ -11,7 +11,7 @@ export default function TopNav() {
       <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center"}}>
         <FaIcon.FaUserCircle style={{ color: "#2CA9E3", fontSize: "28px", marginLeft:"10px", marginRight:"10px" }}/>
         <Typography fontWeight="400" fontSize="16px">
-          Ankit Brijwasi
+          Malay Patel
         </Typography>
         <RiIcon.RiArrowDropDownLine
           style={{ color: "black", fontSize: "28px" }}
